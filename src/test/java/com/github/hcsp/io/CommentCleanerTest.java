@@ -39,6 +39,7 @@ public class CommentCleanerTest {
             writer.write(String.format("%01023d\n", i));
         }
 
+        Assertions.assertEquals(1, FileSearch.grep(hugeTextFile, "1"));
         Assertions.assertEquals(55555, FileSearch.grep(hugeTextFile, "55555"));
     }
 }
